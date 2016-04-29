@@ -1,0 +1,10 @@
+<h3>{{model.name}}</h3>
+
+<strong>Biography</strong>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at cumque cupiditate delectus ea eligendi eveniet, iure numquam omnis provident quo rem, sed? Fugit libero molestiae nam nesciunt, repellendus ullam?
+
+<h4>Published titles:</h4>
+<ul>
+    {{#each model.books as |book|}}
+      <li>{{book.title}}</li>
+    {{/each}}
+</ul>

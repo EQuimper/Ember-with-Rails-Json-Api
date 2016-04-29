@@ -1,0 +1,12 @@
+<ul>
+    {{#each model as |book|}}
+        <a href="#" {{action 'openCheckoutModal' book}}>
+            <li>
+                <strong>{{book.title}}</strong>
+                <em>by</em>
+              {{link-to book.author.name 'author' book.author.id class="author" bubbles=false}}
+            </li>
+        </a>
+    {{/each}}
+    <button {{action 'showAll'}}>Show All</button>
+</ul>
