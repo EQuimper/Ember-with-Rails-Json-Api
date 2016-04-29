@@ -8,5 +8,7 @@
             </li>
         </a>
     {{/each}}
-    <button {{action 'showAll'}}>Show All</button>
+    {{#if showAll}}
+        <button {{action 'showAll'}}>Show All</button>      
+    {{/if}}
 </ul>

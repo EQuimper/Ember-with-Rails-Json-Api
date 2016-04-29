@@ -12,7 +12,8 @@ export default Ember.Route.extend({
 
   actions: {
     showAll() {
-      this.transitionTo({ queryParam: { limit: total }});
+      const total = this.controllerFor('books').get('total');
+      this.transitionTo({ queryParams: { limit: total }});
     },
     openCheckoutModal(book) {
       this.controllerFor('application').set('showingModal', true);
